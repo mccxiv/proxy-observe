@@ -76,7 +76,7 @@
 	        	}
 	        	this.changeset.push(change);
 	        	if(start) {
-	        		deliver(false,(typeof(deliver.delay)==="number" ? delay : 10));
+	        		deliver(false,(typeof(deliver.delay)==="number" ? deliver.delay : 10));
 	        	}
 	    	}
 	    	return true;
@@ -91,7 +91,7 @@
 		        		deliver = this.deliver();
 		        	this.changeset.push(change);
 		        	if(start) {
-		        		deliver(false,(typeof(deliver.delay)==="number" ? delay : 10));
+		        		deliver(false,(typeof(deliver.delay)==="number" ? deliver.delay : 10));
 		        	}
 		    	}
 	    	//}
@@ -105,7 +105,7 @@
         			deliver = this.deliver();
 	        	this.changeset.push(change);
 	        	if(start) {
-	        		deliver(false,(typeof(deliver.delay)==="number" ? delay : 10));
+	        		deliver(false,(typeof(deliver.delay)==="number" ? deliver.delay : 10));
 	        	}
 	    	}
 	    	return true;
@@ -119,7 +119,7 @@
     				deliver = this.deliver();
 	        	this.changeset.push(change);
 	        	if(start) {
-	        		deliver(false,(typeof(deliver.delay)==="number" ? delay : 10));
+	        		deliver(false,(typeof(deliver.delay)==="number" ? deliver.delay : 10));
 	        	}
 	    	}
 	    	return true;
@@ -132,7 +132,7 @@
 					deliver = this.deliver();
 	        	this.changeset.push(change);
 	        	if(start) {
-	        		deliver(false,(typeof(deliver.delay)==="number" ? delay : 10));
+	        		deliver(false,(typeof(deliver.delay)==="number" ? deliver.delay : 10));
 	        	}
 	    	}
 	    	return true;
@@ -183,7 +183,7 @@
 	    	        			deliver = proxy.__observer__.deliver();
 	    	    			proxy.__observer__.changeset.push(change);
 	    	    			if(start) {
-	    		        		deliver(false,(typeof(deliver.delay)==="number" ? delay : 10));
+	    		        		deliver(false,(typeof(deliver.delay)==="number" ? deliver.delay : 10));
 	    		        	}
 	    	    		}
 	    	    	}
@@ -210,7 +210,7 @@
 	    		}
 	    		return target[property];
 	    	}});
-	    	var proxy = Object.observe(arrayproxy,function(changeset) { 
+	    	var proxy = Object.observe(arrayproxy,function(changeset) {
 	    		var changes = changeset.filter(function(change) { return change.name!=="length" && change.name!=="add" && (!acceptlist || acceptlist.indexOf(change.type)>=0); });
 	    		if(changes.length>0) {
 	    			callback(changes);
